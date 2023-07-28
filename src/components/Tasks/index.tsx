@@ -2,9 +2,10 @@ import { FlatList, Text, View } from "react-native";
 import { styles } from "./styles";
 import { useState } from "react";
 import { EmptyList } from "../EmptyList";
+import { Task } from "../Task";
 
 export function Tasks(){
-    const [tasks, setTasks] = useState<string[]>([])
+    const [tasks, setTasks] = useState<string[]>(['ir para o pilates', 'ir para a academia', 'estudar ingles'])
 
     return(
         <View style={styles.container}>
@@ -24,7 +25,7 @@ export function Tasks(){
                     data={tasks}
                     keyExtractor={item => item} 
                     showsVerticalScrollIndicator={false}
-                    renderItem={({item}) => <Text>{item}</Text>}
+                    renderItem={({item}) => <Task task={item} />}
                     ListEmptyComponent={() => <EmptyList />}
                 />
             </View>
