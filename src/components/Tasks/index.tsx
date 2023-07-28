@@ -5,7 +5,7 @@ import { EmptyList } from "../EmptyList";
 import { Task } from "../Task";
 
 export function Tasks(){
-    const [tasks, setTasks] = useState<string[]>(['ir para o pilates', 'ir para a academia', 'estudar ingles'])
+    const [tasks, setTasks] = useState<string[]>([])
 
     return(
         <View style={styles.container}>

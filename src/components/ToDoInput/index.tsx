@@ -26,7 +26,7 @@ export function ToDOInput(){
             />   
 
             <TouchableOpacity style={styles.button} onPress={handleAddTask}>
-                <AntDesign name="pluscircleo" size={16} color="#fff" /> 
+                <AntDesign name="pluscircleo" size={18} color="#fff" /> 
             </TouchableOpacity>
         </View>
     )
