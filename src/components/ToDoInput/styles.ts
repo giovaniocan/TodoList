@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container:{
         marginTop:-28,
-        flex:1,
         marginHorizontal:24,
         flexDirection:"row",
         gap:4,
@@ -18,12 +17,13 @@ export const styles = StyleSheet.create({
         color: '#F2F2F2',
         padding:16,
         fontSize:16,
+        borderWidth: 1, // Define uma largura para a borda
 
         
     },
 
     inputFocused: {
-        borderWidth: 1, // Define uma largura para a borda
+    
         borderColor: '#5E60CE', // Cor da borda quando o input estiver em foco
       },
 
@@ -32,6 +32,9 @@ export const styles = StyleSheet.create({
         backgroundColor: '#1E6F9F',
         padding:18,
         borderRadius:6,
+        borderWidth: 1, // Define uma largura para a borda
 
       },
+
+
 })
