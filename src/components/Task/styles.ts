@@ -20,6 +20,13 @@ export const styles = StyleSheet.create({
 /*         textDecorationLine:'line-through', */
     },
 
+    taskComleted:{
+        flex:1,
+        color:'#808080',
+        fontSize:16,
+        textDecorationLine:'line-through', 
+    },
+
     taskFinished:{
         color:'#F2F2F2',
         fontSize:16,

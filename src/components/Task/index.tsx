@@ -17,7 +17,7 @@ export function Task({task, removeTask, completeTask, incompleteTasl}:TaskProps)
     const [isCompleted, setIsCompleted] = useState(false)
 
     function handleParticpantRemove(){
-        Alert.alert("Remover", `Tem certeza que deseja remover a task ?`, [
+        Alert.alert("Remover", `Tem certeza que deseja remover a task :  ${task}`, [
             {
                 text:'Sim',
                 onPress:() => removeTask(task),
@@ -57,7 +57,7 @@ export function Task({task, removeTask, completeTask, incompleteTasl}:TaskProps)
                 ) 
            }
 
-            <Text style={styles.task}>{task}</Text>
+            <Text style={isCompleted ? styles.taskComleted : styles.task}>{task}</Text>
 
             <TouchableOpacity onPress={handleParticpantRemove}>
                  <Feather name="trash-2" size={20} color="#808080" />
