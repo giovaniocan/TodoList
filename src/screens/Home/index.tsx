@@ -12,11 +12,15 @@ export function Home(){
         setTasks(oldState => [...oldState, newTaskTitle])
     }
 
+    function handleRemoveTask(task: string){
+        setTasks(oldState => oldState.filter(task => task !== task))
+    }
+
     return(
         <View style={styles.container}>
              <Header />
              <ToDoInput addTask={handleAddTask} />
-             <Tasks tasks={tasks} />
+             <Tasks removeTask={handleRemoveTask}  tasks={tasks} />
         </View>
     )
 }

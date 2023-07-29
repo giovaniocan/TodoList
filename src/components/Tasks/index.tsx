@@ -5,10 +5,10 @@ import { Task } from "../Task";
 
 interface TasksProps{
     tasks: string[];
-
+    removeTask: (task: string) => void;
 }
 
-export function Tasks({tasks}:TasksProps){
+export function Tasks({tasks, removeTask}:TasksProps){
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -27,7 +27,7 @@ export function Tasks({tasks}:TasksProps){
                     data={tasks}
                     keyExtractor={item => item} 
                     showsVerticalScrollIndicator={false}
-                    renderItem={({item}) => <Task task={item} />}
+                    renderItem={({item}) =>  <Task task={item} removeTask={removeTask} />}
                     ListEmptyComponent={() => <EmptyList />}
                 />
             </View>
