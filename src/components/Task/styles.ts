@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
     task:{
         color:'#F2F2F2',
         fontSize:16,
+/*         textDecorationLine:'line-through', */
     },
 
     taskFinished:{

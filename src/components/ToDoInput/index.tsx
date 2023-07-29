@@ -5,9 +5,10 @@ import { useState } from "react";
 
 interface ToDoProps{
     addTask: (task: string) => void;
+    tasks: string[];
 }
 
-export function ToDoInput({addTask}:ToDoProps){
+export function ToDoInput({addTask, tasks}:ToDoProps){
     const [isFocused, setIsFocused] = useState(false);
     const [taskName, setTaskName] = useState('');
 
@@ -16,7 +17,14 @@ export function ToDoInput({addTask}:ToDoProps){
     function handleAddTask(){
         if(taskName.trim() === ''){
             return Alert.alert('Campo vazio', 'preencha uma task valida para adicionar')
+        }else{
+            if(tasks.includes(taskName)){
+                setTaskName('');
+                setIsFocused(false);
+                return Alert.alert('Tasks já existe', 'Já existe essa task')
+             }
         }
+
         
 
         addTask(taskName)

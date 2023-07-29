@@ -19,7 +19,7 @@ export function Home(){
     return(
         <View style={styles.container}>
              <Header />
-             <ToDoInput addTask={handleAddTask} />
+             <ToDoInput tasks={tasks} addTask={handleAddTask} />
              <Tasks removeTask={handleRemoveTask}  tasks={tasks} />
         </View>
     )
