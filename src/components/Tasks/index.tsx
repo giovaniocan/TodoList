@@ -1,12 +1,14 @@
 import { FlatList, Text, View } from "react-native";
 import { styles } from "./styles";
-import { useState } from "react";
 import { EmptyList } from "../EmptyList";
 import { Task } from "../Task";
 
-export function Tasks(){
-    const [tasks, setTasks] = useState<string[]>([])
+interface TasksProps{
+    tasks: string[];
 
+}
+
+export function Tasks({tasks}:TasksProps){
     return(
         <View style={styles.container}>
             <View style={styles.header}>
