@@ -20,7 +20,8 @@ export function Home(){
         <View style={styles.container}>
              <Header />
              <ToDoInput tasks={tasks} addTask={handleAddTask} />
-             <Tasks removeTask={handleRemoveTask}  tasks={tasks} />
+             <Tasks 
+                removeTask={handleRemoveTask} tasks={tasks} />
         </View>
     )
 }

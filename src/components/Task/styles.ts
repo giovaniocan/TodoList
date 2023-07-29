@@ -9,9 +9,12 @@ export const styles = StyleSheet.create({
         padding:12,
         borderRadius:10,
         marginBottom:8,
+        gap:8,
+        alignItems:'center',
     },
 
     task:{
+        flex:1,
         color:'#F2F2F2',
         fontSize:16,
 /*         textDecorationLine:'line-through', */
