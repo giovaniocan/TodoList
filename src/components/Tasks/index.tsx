@@ -14,7 +14,7 @@ export function Tasks({tasks}:TasksProps){
             <View style={styles.header}>
                  <View style={styles.infos}>
                     <Text style={styles.createdInfo}>Criadas</Text>
-                    <Text style={styles.numberInfo}>0</Text>
+                    <Text style={styles.numberInfo}>{tasks.length}</Text>
                  </View>
                  <View style={styles.infos}>
                     <Text style={styles.concludeInfo}>Concluídas</Text>

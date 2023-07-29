@@ -1,4 +1,4 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { styles } from "./styles";
 import { useState } from "react";
@@ -14,6 +14,11 @@ export function ToDoInput({addTask}:ToDoProps){
     const handleFocus = () => setIsFocused(true);
 
     function handleAddTask(){
+        if(taskName.trim() === ''){
+            return Alert.alert('Campo vazio', 'preencha uma task valida para adicionar')
+        }
+        
+
         addTask(taskName)
 
         setTaskName('');
