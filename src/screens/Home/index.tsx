@@ -13,7 +13,7 @@ export function Home(){
     }
 
     function handleRemoveTask(task: string){
-        setTasks(oldState => oldState.filter(task => task !== task))
+        setTasks(oldState => oldState.filter(item => item !== task))
     }
 
     return(
